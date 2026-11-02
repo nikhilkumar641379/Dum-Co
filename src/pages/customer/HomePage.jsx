@@ -44,7 +44,7 @@ export const HomePage = () => {
         <div className="container-custom">
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
             alignItems: 'center',
             gap: '2rem'
           }}>
@@ -309,7 +309,7 @@ export const HomePage = () => {
 
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
             gap: '1.125rem'
           }}>
             {bestsellers.map((food) => (

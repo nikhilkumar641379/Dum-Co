@@ -162,14 +162,15 @@ export const MenuPage = () => {
           </div>
         </div>
 
-        {/* Category Pills Rail (Compact) */}
+        {/* Category Pills Rail (Compact & Touch Inertia) */}
         <div style={{
           display: 'flex',
           gap: '8px',
           overflowX: 'auto',
           paddingBottom: '0.5rem',
           marginBottom: '1rem',
-          scrollbarWidth: 'none'
+          scrollbarWidth: 'none',
+          WebkitOverflowScrolling: 'touch'
         }}>
           <button
             onClick={() => handleCategoryChange('all')}
@@ -235,7 +236,7 @@ export const MenuPage = () => {
         ) : (
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fill, minmax(260px, 1fr))',
             gap: '1.125rem'
           }}>
             {filteredItems.map((food) => (

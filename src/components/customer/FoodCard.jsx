@@ -205,6 +205,7 @@ export const FoodCard = ({ food }) => {
             className="dish-modal-container"
             onClick={(e) => e.stopPropagation()}
           >
+            <div className="dish-modal-drag-handle" />
             {/* Modal Image Header */}
             <div style={{ position: 'relative', width: '100%', height: '220px', backgroundColor: 'var(--surface-subdued)' }}>
               <img

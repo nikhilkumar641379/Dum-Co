@@ -125,6 +125,13 @@ h1, h2, h3, h4, .font-serif {
   }
 }
 
+@media (max-width: 640px) {
+  .container-custom {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
+
 /* Button Classes */
 .btn-primary {
   display: inline-flex;
@@ -442,4 +449,80 @@ h1, h2, h3, h4, .font-serif {
     border-bottom-right-radius: 0;
   }
 }
+
+/* Mobile Bottom Sheet Pull Handle */
+.dish-modal-drag-handle {
+  display: none;
+}
+
+@media (max-width: 640px) {
+  .dish-modal-drag-handle {
+    display: block;
+    width: 40px;
+    height: 4px;
+    background-color: #D6CEBE;
+    border-radius: var(--radius-full);
+    margin: 8px auto 4px;
+  }
+}
+
+/* Mobile App Sticky Bottom Bar (Zomato / Swiggy Style) */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 62px;
+  background-color: rgba(250, 247, 242, 0.96);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-top: 1px solid var(--surface-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  z-index: 999;
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  box-shadow: 0 -4px 16px rgba(41, 37, 36, 0.06);
+}
+
+@media (min-width: 769px) {
+  .mobile-bottom-nav {
+    display: none !important;
+  }
+}
+
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.6875rem;
+  font-weight: 600;
+  flex: 1;
+  padding: 6px 0;
+  transition: all var(--transition-fast);
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-nav-item.active {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.mobile-nav-item:active {
+  transform: scale(0.92);
+}
+
+@media (max-width: 768px) {
+  .customer-main-content {
+    padding-bottom: 4.25rem !important;
+  }
+}
+
 
