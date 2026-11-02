@@ -59,8 +59,21 @@
   --transition-normal: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --transition-smooth: 400ms cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Layout Containers */
+  /* Layout Containers & Compact Spacing Tokens (40-50% reduced) */
   --container-max: 1280px;
+  --section-py: 2.5rem; /* 40px desktop */
+  --section-py-hero: 2rem;
+  --heading-gap: 1.5rem; /* 24px */
+  --cards-gap: 1.125rem; /* 18px */
+}
+
+@media (max-width: 768px) {
+  :root {
+    --section-py: 2rem; /* 32px mobile */
+    --section-py-hero: 1.5rem;
+    --heading-gap: 1.25rem; /* 20px */
+    --cards-gap: 1rem; /* 16px */
+  }
 }
 
 /* Base Reset & Typography */
@@ -363,3 +376,70 @@ h1, h2, h3, h4, .font-serif {
 .animate-fade-in {
   animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* Reusable Compact Section Wrappers */
+.section-compact {
+  padding-top: var(--section-py);
+  padding-bottom: var(--section-py);
+}
+
+.heading-compact {
+  margin-bottom: var(--heading-gap);
+}
+
+.cards-grid-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--cards-gap);
+}
+
+/* Dish Quick View Modal / Bottom Sheet */
+.dish-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(28, 25, 23, 0.65);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  animation: modalFadeIn 0.25s ease-out forwards;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.dish-modal-container {
+  background-color: var(--surface-raised);
+  border: 1px solid var(--surface-border);
+  border-radius: var(--radius-xl);
+  box-shadow: var(--shadow-modal);
+  width: 100%;
+  max-width: 540px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes modalSlideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@media (max-width: 640px) {
+  .dish-modal-overlay {
+    align-items: flex-end;
+    padding: 0;
+  }
+  .dish-modal-container {
+    max-height: 88vh;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+

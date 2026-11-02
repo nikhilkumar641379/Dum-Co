@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://dum-and-co-restaurant.vercel.app/sitemap.xml

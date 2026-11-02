@@ -54,7 +54,7 @@ export const CartCheckoutPage = () => {
 
   if (items.length === 0) {
     return (
-      <div className="container-custom" style={{ padding: '6rem 0', textAlign: 'center' }}>
+      <div className="container-custom" style={{ padding: '3rem 0', textAlign: 'center' }}>
         <ShoppingBag size={54} color="var(--text-subtle)" style={{ margin: '0 auto 1.5rem' }} />
         <h2>Your Handi is Empty</h2>
         <p style={{ color: 'var(--text-muted)', marginBottom: '2rem' }}>
@@ -149,7 +149,7 @@ export const CartCheckoutPage = () => {
   };
 
   return (
-    <div className="animate-fade-in" style={{ padding: '3rem 0 5rem' }}>
+    <div className="animate-fade-in" style={{ padding: '1.75rem 0 2.5rem' }}>
       <div className="container-custom">
         {/* Navigation Breadcrumb */}
         <Link

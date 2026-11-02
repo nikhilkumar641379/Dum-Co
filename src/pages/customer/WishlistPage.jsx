@@ -19,9 +19,9 @@ export const WishlistPage = () => {
   }, [wishlistIds]);
 
   return (
-    <div className="animate-fade-in" style={{ padding: '3.5rem 0 5rem' }}>
+    <div className="animate-fade-in" style={{ padding: '1.75rem 0 2.5rem' }}>
       <div className="container-custom">
-        <div style={{ textAlign: 'center', maxWidth: '640px', margin: '0 auto 3rem' }}>
+        <div style={{ textAlign: 'center', maxWidth: '600px', margin: '0 auto 1.5rem' }}>
           <span style={{ fontSize: '0.8125rem', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '0.12em', color: 'var(--secondary)' }}>
             CURATED FEAST LIST
           </span>
@@ -67,8 +67,8 @@ export const WishlistPage = () => {
         ) : (
           <div style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fill, minmax(310px, 1fr))',
-            gap: '2rem'
+            gridTemplateColumns: 'repeat(auto-fill, minmax(280px, 1fr))',
+            gap: '1.125rem'
           }}>
             {wishlistItems.map((food) => (
               <FoodCard key={food.id} food={food} />

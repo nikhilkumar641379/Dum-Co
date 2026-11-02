@@ -92,7 +92,7 @@ export const FoodDetailPage = () => {
   };
 
   return (
-    <div className="animate-fade-in" style={{ padding: '2.5rem 0 5rem' }}>
+    <div className="animate-fade-in" style={{ padding: '1.5rem 0 2.5rem' }}>
       <div className="container-custom">
         {/* Back Link */}
         <Link
@@ -103,20 +103,20 @@ export const FoodDetailPage = () => {
             gap: '6px',
             color: 'var(--text-muted)',
             textDecoration: 'none',
-            fontSize: '0.875rem',
+            fontSize: '0.8125rem',
             fontWeight: 600,
-            marginBottom: '2rem'
+            marginBottom: '1rem'
           }}
         >
-          <ArrowLeft size={16} />
+          <ArrowLeft size={15} />
           <span>Back to Royal Menu</span>
         </Link>
 
         {/* 2-Column Dish Showcase */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(340px, 1fr))',
-          gap: '3.5rem',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+          gap: '2rem',
           alignItems: 'start'
         }}>
           {/* Left Column: Food Image Showcase */}

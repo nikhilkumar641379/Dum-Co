@@ -17,7 +17,18 @@ export const RESTAURANT_INFO = {
   deliveryFee: 45,
   isOpen: true,
   rating: 4.9,
-  totalReviews: 2450
+  totalReviews: 2450,
+  googleMapsUrl: "https://maps.google.com/?q=Sector+54+Golf+Course+Road+Gurugram+Dum+and+Co",
+  socials: {
+    instagram: "https://instagram.com/dumandco_official",
+    facebook: "https://facebook.com/dumandcorestaurant",
+    twitter: "https://twitter.com/dumandco",
+    youtube: "https://youtube.com/@dumandco"
+  },
+  geo: {
+    latitude: 28.445258,
+    longitude: 77.098863
+  }
 };
 
 export const CATEGORIES = [

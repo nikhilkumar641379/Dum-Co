@@ -56,7 +56,7 @@ export const ProfileOrdersPage = () => {
   };
 
   return (
-    <div className="animate-fade-in" style={{ padding: '3.5rem 0 5rem' }}>
+    <div className="animate-fade-in" style={{ padding: '1.75rem 0 2.5rem' }}>
       <div className="container-custom">
         {/* Profile Hero Header */}
         <div style={{
